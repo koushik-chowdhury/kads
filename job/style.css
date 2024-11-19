@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto";
+  line-height: 1.6;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent scrolling on desktop */
+  background-color: #111111;
+}
+li {
+  list-style: none;
+}
+
+/*  navigation */
+
+.nav {
+  display: flex;
+  justify-content: center; /* Centers the ul horizontally */
+  align-items: center; /* Centers the ul vertically */
+  /* height: 100vh; Full viewport height */
+}
+
+.nav ul {
+  list-style-type: none; /* Remove default list bullets */
+  padding: 0;
+  margin: 10px;
+  display: flex; /* Display items in a row */
+  gap: 20px; /* Space between list items */
+  background-color: #ffffff; /* Background color of the ul */
+  padding: 10px 20px; /* Padding inside the ul */
+  border-radius: 8px; /* Optional: rounds the corners of the box */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Box shadow */
+  justify-content: center;
+  align-items: center;
+}
+
+.nav ul li {
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  transition: 0.3s ease-in-out all;
+}
+
+.nav ul li:hover {
+  color: #007bff; /* Optional: change color on hover */
+}
+ul img {
+  width: 80px;
+}
+
+/* navigation */
+
+/* CONTAINER */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* Default layout for desktops */
+  gap: 20px;
+  height: 100vh;
+  padding: 10px;
+}
+
+/* CONTAINER */
+
+/* ALL COLUMN */
+.left-column,
+.middle-column,
+.right-column {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ALL COLUMN XX*/
+
+/* LEFT COLUMN */
+.left-column {
+  height: 100vh;
+  overflow-x: auto; /* Horizontal scrolling for categories */
+  /* overflow-y: hidden; Prevent vertical scrolling */
+  white-space: nowrap; /* Ensure content doesn't wrap */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  color: #fff;
+}
+.left-column h2 {
+  text-align: center;
+  background-color: #111111;
+  border-radius: 8px;
+}
+.left-column::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit-based browsers */
+}
+.left-column {
+  padding: 20px;
+}
+.left-column ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  flex-wrap: wrap;
+}
+.left-column ul li {
+  /* background-color: #0056b3; */
+  border: 1px solid white;
+  padding: 6px;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+  cursor: pointer;
+}
+
+/* .left-column .category {
+  display: inline-block;
+  background: #007bff;
+  color: #ffffff;
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+.left-column .category:hover {
+  background: #0056b3;
+}
+
+/* LEFT COLUMN */
+
+.middle-column {
+  overflow-y: scroll; /* Enable scrolling */
+  height: 100%;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer */
+  padding-bottom: 70px;
+}
+.middle-column h1 {
+  text-align: center;
+  color: #fff;
+}
+.job-post-heading{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.job-post-heading h3{
+  width: 90%;
+}
+.job-post-heading img{
+  width: 10%;
+  height: 10%;
+}
+.middle-column::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Webkit browsers */
+}
+
+.middle-column .job-post {
+  background-color: #1a1a1a;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #f0f0f0;
+}
+
+.middle-column .job-post h3 {
+  font-size: 1.5rem;
+  /* display: inline; */
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.middle-column .job-post p {
+  margin: 5px 0;
+}
+.middle-column .job-post p i {
+  margin-right: 10px;
+}
+.middle-column .job-post p a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
+.middle-column .job-post p a:hover {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.middle-column .job-post button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.middle-column .job-post button:hover {
+  background-color: #0056b3;
+}
+
+.right-column {
+  text-align: center;
+}
+
+.right-column .ad-banner {
+  background: #e0f7fa;
+  color: #00796b;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.right-column .ad-banner img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+  .nav {
+    z-index: -100;
+  }
+  .job-post-align {
+    display: flex;
+    justify-content: start;
+    gap: 4rem;
+  }
+  .container {
+    grid-template-columns: 2fr; /* Stack all columns vertically*/
+    height: 100vh;
+    padding-bottom: 70px;
+  }
+
+  .left-column {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    padding: 5px;
+    background: #f0f0f0;
+    /* display: flex; */
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .middle-column {
+    margin-top: 10px; /*Add spacing to avoid overlap with taskbar */
+    overflow-y: scroll; /*Keep middle column scrollable*/
+    width: 100%;
+    padding-inline: 5px;
+  }
+
+  .middle-column .job-post p {
+    font-size: 0.8rem;
+  }
+  .middle-column .job-post h3 {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .right-column {
+    text-align: center;
+    display: none;
+  }
+
+  .right-column .ad-banner {
+    position: fixed; /*Stick to the bottom of the screen*/
+    bottom: 70px; /*Above the taskbar*/
+    left: 10px;
+    right: 10px;
+    z-index: 10;
+  }
+}
+@media screen and (max-width: 480px) {
+  .middle-column .job-post button {
+    width: 100%; /*Ensure buttons are full-width*/
+    padding: 10px;
+  }
+
+  .right-column .ad-banner {
+    font-size: 14px; /*Adjust text size for smaller screens*/
+  }
+}
