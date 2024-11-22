@@ -50,17 +50,21 @@
     <div class="container">
       <div class="left-column">
         <h2>Categories</h2>
-        <ul>
-          <li>Central</li>
-          <li>State</li>
-          <li>Bank</li>
-          <li>SSC</li>
-        </ul>
+        <div id="button" class="button">
+          <button data-sector="all" id="mainButton">All</button>
+          <button data-sector="central">Central</button>
+          <button data-sector="bank">Bank</button>
+          <button data-sector="ssc">SSC</button>
+          <button data-sector="scholarship">Scholership</button>
+        </div>
       </div>
       <div class="middle-column">
         <div class="content">
+          <div class="notice">
+          <h1>No Jobs Available</h1>
+        </div>
           <!-- -----------------------------------------------1st------------------ -->
-          <div class="job-post">
+          <div class="job-post" data-sector="bank">
             <div class="job-post-heading">
               <h3>
                 IDBI Bank: Recruitment of Executive - Sales and Operations
@@ -100,7 +104,7 @@
           <!-- ----------------------------------END------------------------------------>
 
           <!-- ----------------------------------2nd--------------------------------- -->
-          <div class="job-post">
+          <div class="job-post" data-sector="scholarship">
             <div class="job-post-heading">
               <h3>Swami Vivekananda Merit-cum-Means Scholership</h3>
               <img
@@ -141,7 +145,7 @@
           <!-- ----------------------------------END------------------------------------>
 
           <!-- ----------------------------------3rd------------------------------------>
-          <div class="job-post">
+          <div class="job-post" data-sector="bank">
             <div class="job-post-heading">
               <h3 id="bank">Recruitment of Junior Assistant Manager</h3>
               <img

@@ -5,7 +5,33 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+#mainButton {
+  width: 85%;
+  background-color: #007bff;
+  border: none;
+}
+.left-column button {
+  border: 1px solid #fff;
+  /* margin-block: 10px; */
+  padding: 10px;
+  background: transparent;
+  color: #fff;
+  width: 40%;
+  border-radius: 4px;
+  background-color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
 body {
   font-family: "roboto";
   line-height: 1.6;
@@ -38,7 +64,6 @@ li {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Box shadow */
   justify-content: center;
   align-items: center;
-
 }
 
 .nav ul li {
@@ -147,20 +172,19 @@ ul img {
   text-align: center;
   color: #fff;
 }
-.job-post-heading{
+.job-post-heading {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
-.job-post-heading h3{
+.job-post-heading h3 {
   width: 90%;
 }
 .content {
   display: flex;
   flex-direction: column-reverse;
-
 }
-.job-post-heading img{
+.job-post-heading img {
   width: 10%;
   height: 10%;
   border-radius: 4px;
@@ -244,7 +268,7 @@ ul img {
   .nav {
     z-index: -100;
   }
-  .wrap{
+  .wrap {
     gap: 1.5rem;
   }
   .container {
