@@ -29,7 +29,7 @@ li {
 .nav ul {
   list-style-type: none; /* Remove default list bullets */
   padding: 0;
-  margin: 10px;
+  margin-top: 15px;
   display: flex; /* Display items in a row */
   gap: 20px; /* Space between list items */
   background-color: #ffffff; /* Background color of the ul */
@@ -38,6 +38,7 @@ li {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Box shadow */
   justify-content: center;
   align-items: center;
+
 }
 
 .nav ul li {
@@ -154,9 +155,15 @@ ul img {
 .job-post-heading h3{
   width: 90%;
 }
+.content {
+  display: flex;
+  flex-direction: column-reverse;
+
+}
 .job-post-heading img{
   width: 10%;
   height: 10%;
+  border-radius: 4px;
 }
 .middle-column::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Webkit browsers */
@@ -169,6 +176,12 @@ ul img {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: #f0f0f0;
+}
+.wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 4rem;
 }
 
 .middle-column .job-post h3 {
@@ -231,10 +244,8 @@ ul img {
   .nav {
     z-index: -100;
   }
-  .job-post-align {
-    display: flex;
-    justify-content: start;
-    gap: 4rem;
+  .wrap{
+    gap: 1.5rem;
   }
   .container {
     grid-template-columns: 2fr; /* Stack all columns vertically*/
