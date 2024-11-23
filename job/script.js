@@ -24,6 +24,7 @@ window.addEventListener("load", formatDate);
 const buttons = document.getElementById("button");
 const jobs = document.querySelectorAll(".job-post");
 const notice = document.querySelector(".notice");
+
 function filterJobs(sector) {
   let visibleJobs = 0;
   jobs.forEach((job) => {
@@ -49,7 +50,23 @@ buttons.addEventListener("click", (e) => {
   if (sector) {
     filterJobs(sector);
   }
+  if (window.getComputedStyle(filterSection).display === "block") {
+    filterSection.style.display = "none";
+  }
 });
 
 // Optionally, show all jobs by default
 filterJobs("all");
+
+// HANDLE FILTER IN MOBILE DEVICE
+
+let bar = document.getElementById("responsive-bar");
+let filterSection = document.getElementById("filter-section");
+const computedStyle = window.getComputedStyle(filterSection);
+bar.addEventListener("click", () => {
+  if (computedStyle.display === "none") {
+    filterSection.style.display = "block";
+  } else {
+    filterSection.style.display = "none";
+  }
+});

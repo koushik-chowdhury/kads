@@ -42,7 +42,9 @@ body {
 li {
   list-style: none;
 }
-
+.responsive-bar{
+  display: none;
+}
 /*  navigation */
 
 .nav {
@@ -265,6 +267,25 @@ ul img {
 /* Responsive Styles */
 
 @media screen and (max-width: 768px) {
+  .responsive-bar{
+    display: block;
+    color: #000;
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    background-color: #fff;
+    padding-inline: 5px;
+    border-radius: 4px;
+    /* border: 1px solid white; */
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .responsive-bar:hover{
+    transform: scaleX(1.2);
+  }
+  .responsive-bar ul li{
+    font-size: 1.5rem;
+  }
   .nav {
     z-index: -100;
   }
@@ -277,7 +298,7 @@ ul img {
     padding-bottom: 70px;
   }
 
-  .left-column {
+  /* .left-column {
     display: none;
     position: fixed;
     bottom: 0;
@@ -286,11 +307,37 @@ ul img {
     height: 60px;
     padding: 5px;
     background: #f0f0f0;
-    /* display: flex; */
     justify-content: space-evenly;
     align-items: center;
     z-index: 10;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  } */
+   .left-column{
+    position: absolute;
+    left: 12px;
+    top: 88px;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   }
+   .left-column{
+    display: none;
+   }
+   .left-column button {
+    border: 1px solid #fff;
+    /* margin-block: 10px; */
+    padding: 10px;
+    background: transparent;
+    color: #fff;
+    width:100%;
+    border-radius: 4px;
+    background-color: #000;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #mainButton{
+    width: 100%;
   }
 
   .middle-column {
