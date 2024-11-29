@@ -377,3 +377,7 @@ ul img {
     font-size: 14px; /*Adjust text size for smaller screens*/
   }
 }
+.adsbygoogle {
+  max-width: 100%;
+  margin: 0 auto;
+}
