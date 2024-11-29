@@ -50,9 +50,9 @@ buttons.addEventListener("click", (e) => {
   if (sector) {
     filterJobs(sector);
   }
-  if (window.getComputedStyle(filterSection).display === "block") {
-    filterSection.style.display = "none";
-  }
+  // if (window.getComputedStyle(filterSection).display === "block") {
+  //   filterSection.style.display = "none";
+  // }
 });
 
 // Optionally, show all jobs by default
