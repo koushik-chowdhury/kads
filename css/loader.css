@@ -1,0 +1,61 @@
+/* Full-page loader container styling */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Background color */
+    display: flex; /* Use flex to center the content */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    z-index: 9999; /* Ensure it stays above other content */
+  }
+  
+  /* Wrapper to hold the logo and the bouncing dots */
+  .loader-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Dots styling */
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #3498db; /* Dot color */
+    border-radius: 50%;
+    animation: bounce 1.2s infinite ease-in-out;
+    margin: 0 8px; /* Consistent spacing for all elements */
+  }
+  
+  /* Individual dot delays for animation */
+  .dot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  /* Logo styling */
+  .logo {
+    width: 50px; /* Adjust size of your logo */
+    height: auto;
+    margin: 0 8px; /* Space between the logo and dots */
+  }
+  
+  /* Bouncing animation for dots */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  

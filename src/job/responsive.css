@@ -1,0 +1,106 @@
+
+@media screen and (max-width: 768px) {
+  /* MENU BAR ICON*/
+  .responsive-bar {
+    display: block;
+    color: #000;
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    background-color: #fff;
+    padding-inline: 5px;
+    border-radius: 4px;
+    /* border: 1px solid white; */
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .responsive-bar:hover {
+    transform: scaleX(1.2);
+  }
+  .responsive-bar ul li {
+    font-size: 1.5rem;
+  }
+  .left-column {
+    position: absolute;
+    left: 12px;
+    top: 88px;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .left-column {
+    display: none;
+  }
+  .left-column button {
+    border: 1px solid #fff;
+    /* margin-block: 10px; */
+    padding: 10px;
+    background: transparent;
+    color: #fff;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #000;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #mainButton {
+    width: 100%;
+  }
+  /* END MENU BAR */
+  /* --------------------------- */
+  /* NAV BAR */
+  .nav {
+    z-index: -100;
+  }
+  /* END NAV BAR */
+  .wrap {
+    gap: 1.5rem;
+  }
+  .container {
+    grid-template-columns: 2fr;
+    /* Stack all columns vertically*/
+    height: 100vh;
+    padding-bottom: 70px;
+  }
+  .middle-column {
+    margin-top: 10px;
+    /*Add spacing to avoid overlap with taskbar */
+    overflow-y: scroll;
+    /*Keep middle column scrollable*/
+    width: 100%;
+    padding-inline: 5px;
+  }
+  .middle-column .job-post p {
+    font-size: 0.8rem;
+  }
+  .middle-column .job-post h3 {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .right-column {
+    text-align: center;
+    display: none;
+  }
+  .right-column .ad-banner {
+    position: fixed;
+    /*Stick to the bottom of the screen*/
+    bottom: 70px;
+    /*Above the taskbar*/
+    left: 10px;
+    right: 10px;
+    z-index: 10;
+  }
+}
+@media screen and (max-width: 480px) {
+  .middle-column .job-post button {
+    width: 100%;
+    /*Ensure buttons are full-width*/
+    padding: 10px;
+  }
+
+  .right-column .ad-banner {
+    font-size: 14px;
+    /*Adjust text size for smaller screens*/
+  }
+}
